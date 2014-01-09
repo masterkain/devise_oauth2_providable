@@ -7,11 +7,11 @@ module Devise
       end
 
       def new
-        respond *authorize_endpoint.call(request.env)
+        respond(*authorize_endpoint.call(request.env))
       end
 
       def create
-        respond *authorize_endpoint(:allow_approval).call(request.env)
+        respond(*authorize_endpoint(:allow_approval).call(request.env))
       end
 
       private
