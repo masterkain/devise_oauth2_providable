@@ -1,6 +1,6 @@
 module Devise
   module Oauth2Providable
-    class AuthorizationsController < Devise::Oauth2Providable::BaseController
+    class Devise::Oauth2Providable::AuthorizationsController < Devise::Oauth2Providable::BaseController
       rescue_from Rack::OAuth2::Server::Authorize::BadRequest do |e|
         @error = e
         render :error, :status => e.status
